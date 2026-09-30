@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.yc.carcontroller'
+    namespace 'com.yc.car'
     compileSdk 35
 
     defaultConfig {
-        applicationId 'com.yc.carcontroller'
+        applicationId 'com.yc.car'
         minSdk 23
         targetSdk 35
         versionCode 1
@@ -15,8 +15,5 @@ android {
     }
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
+dependencies {
 }

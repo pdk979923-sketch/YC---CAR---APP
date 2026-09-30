@@ -1,13 +1,10 @@
-# YC Car Controller
+# YC-CAR-APP
 
-Android BLE controller for the YC_CAR_DEMO protocol.
+Complete Android Studio project structure for building the YC Car Controller APK with GitHub Actions.
 
-Controls:
-- Forward: AA 00 02 00 00 00 00 42 00 02
-- Reverse: AA 00 02 00 00 00 00 41 00 02
-- Left: AA 00 02 00 00 00 00 44 00 02
-- Right: AA 00 02 00 00 00 00 48 00 02
-- Stop: AA 00 02 00 00 00 00 40 00 02
+## Build
+Open GitHub -> Actions -> Build YC Car APK -> Run workflow.
 
-Packets are sent every 100 ms while a direction is held, with a stop packet on release.
-The controller looks for the FFF2 writable characteristic and falls back to the first writable BLE characteristic.
+The generated APK is uploaded as an Actions artifact named `YC-CAR-APP-debug`.
+
+Note: the current Java code provides the controller UI and Bluetooth permission handling. The exact BLE service/characteristic and command bytes for the specific YC car still need to be known before real motor commands can be sent.
